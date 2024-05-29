@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,300;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            min-width: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo{
+            position: relative;
+            max-width: 80px;
+        }
+        header ul{
+            position: relative;
+            display: flex;
+        }
+        header ul li{
+            list-style: none;
+        }
+        header ul li a{
+            display: inline-block;
+            color: #333;
+            font-weight: 800;
+            margin-left: 40px;
+            text-decoration: none;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container .text-box{
+            position: relative;
+            max-width: 600px;
+        }
+        .container .text-box h2{
+            color: #333;
+            font-size: 4em;
+            font-weight: 500px;
+        }
+        .container .text-box h2 span{
+            color: #EC2227;
+            font-size: 1.2em;
+            font-weight: 900;
+        }
+        .container .text-box p{
+            color: #333;
+        }
+        .container .text-box a{
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background: #EC2227;
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .container .img-box{
+            width: 600px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+            margin-top: 50px;
+        }
+        .container .img-box img{
+            max-width: 400px;
+        }
+        .thumb{
+            position: absolute;
+            left: 45%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .thumb li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 30px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .thumb li:hover{
+            transform: translateY(-15px);
+        }
+        .thumb li img{
+            max-width: 100px;
+        }
+        .social{
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .social li {
+            list-style: none;
+        }
+        .social li a{
+            display: inline-block;
+            margin: 5px 0;
+            transform: scale(0.6);
+            filter: invert(1);
+        }
+        .circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #EC2227;
+            clip-path: circle(600px at right 800px);
+        }
+        
+        </style>
+    <title>KitKat Chocolate Website Landing Page</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="kitkat.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="text-box">
+                <h2>Have a break,<br>Have a <span>KitKat®</span></h2>
+                <p>The KIT KAT® Bar got its start across the pond in 1935. Originally known by Londoners as “Rowntree's Chocolate Crisp,” the candy was renamed in 1937 to “Kit Kat®  Chocolate Crisp.”
+                   While KIT KAT® Bars are a global confection, The Hershey Company has produced the candy in the U.S. since 1970. Today, KIT KAT® Bars come in a variety of new and seasonal flavors to keep candy fans on their toes.</p>
+                <a href="3">learn More</a>
+            </div>
+            <div class="img-box">
+                <img src="kitkats.webp" class="kitkat" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="kitkat1.webp" onclick="imgSlider('kitkatbig.png');changeCircleColor('#017143')"></li>
+            <li><img src="kitkat2.webp" onclick="imgSlider('img2.png');changeCircleColor('#0eb7495')"></li>
+            <li><img src="kitkat3.jpg" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        </section>
+</body>
+</html>
